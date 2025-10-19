@@ -1,0 +1,58 @@
+{
+  "name": "Django Dev (Python 3.13)",
+  "dockerComposeFile": ["../docker-compose.dev.yml"],
+  "service": "web",
+  "workspaceFolder": "/workspace",
+  "forwardPorts": [8000],
+  "portsAttributes": {
+    "8000": {
+      "label": "Django Dev Server",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  
+  // 1. Comando que se ejecuta una vez, para copiar el .env
+  "postCreateCommand": "cp .env.example .env && rm -f src/.gitkeep && grep -qxF 'cd /workspace/src' /root/.bashrc || echo 'cd /workspace/src' >> /root/.bashrc",
+ 
+  "customizations": {
+    "vscode": {
+      "settings": {
+        // Desactivar la detección y reenvío automáticos
+        "remote.autoForwardPorts": false,
+        "remote.autoForwardPortsSource": "process",         
+        "remote.portsAttributes": {
+          "*/tcp": {
+            "onAutoForward": "ignore"
+          }
+        },
+        
+        // 3. CONFIGURACIÓN PARA LIMPIAR LA VISTA DEL EXPLORER
+        "files.exclude": {
+            "**/.devcontainer": true,
+            "**/docker-compose*.yml": true,
+            "**/Dockerfile*": true,
+            "**/.dockerignore": true,
+            "**/.gitignore": true,
+            "README.md": true,
+            "LICENSE": true,
+            ".env.example": true
+        },
+        
+        // Configuración útil para Django
+        "emmet.includeLanguages": {
+          "django-html": "html"
+        },
+        "files.associations": {
+          "**/templates/**/*.html": "django-html",
+          "**/templates/**/*": "django-txt"
+        }
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "batisteo.vscode-django",
+        "qwtel.sqlite-viewer"
+      ]
+    }
+  }
+}

@@ -1,0 +1,16 @@
+services:
+  web:
+    container_name: django-web
+    build:
+      context: .
+      dockerfile: .devcontainer/Dockerfile
+    volumes:
+      - .:/workspace:delegated
+      - django_vscode_data:/root/.vscode-server
+    ports:
+      - "8000:8000"
+    command: ["/bin/sh", "-c", "sleep infinity"]
+
+volumes:
+  django_vscode_data:
+
