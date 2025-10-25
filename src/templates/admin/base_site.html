@@ -1,0 +1,18 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block title %}Panel de administración | Pepemel, S.L.{% endblock %}
+
+{% block branding %}
+<div id="site-header">
+  <img src="{% static 'img/logo.png' %}" alt="Logo" height="40" style="vertical-align: middle; margin-right: 10px;">
+  <h1 id="site-name">
+    <a href="{% url 'admin:index' %}">Pepemel, S.L.</a>
+  </h1>
+</div>
+{% endblock %}
+
+{% block extrastyle %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'css/admin_custom.css' %}">
+{% endblock %}

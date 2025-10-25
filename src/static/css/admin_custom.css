@@ -1,0 +1,32 @@
+/* Colores de fondo y encabezado */
+#header {
+    background-color: #0a2a43; /* azul oscuro corporativo */
+    color: #fff;
+}
+
+#header h1 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Cambiar color de los botones principales */
+.button, input[type=submit], .submit-row input {
+    background-color: #1e88e5;
+    color: white;
+    border-radius: 6px;
+    border: none;
+}
+
+.button:hover {
+    background-color: #1565c0;
+}
+
+/* Ajustes visuales generales */
+#content {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+#site-header {
+    display: flex;
+    align-items: center;
+}
