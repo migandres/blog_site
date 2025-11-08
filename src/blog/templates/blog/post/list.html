@@ -10,5 +10,5 @@
         <p class="date">Publicado el {{ post.publish }} por {{ post.author }}</p>
         {{ post.body|truncatewords:30|linebreaks }}
     {% endfor %}
-    {% include 'blog/post/pagination.html' with page=posts %}
+    {% include 'blog/post/pagination.html' with page=page_obj %}
 {% endblock %}
