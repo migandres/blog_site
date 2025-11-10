@@ -20,12 +20,12 @@ class PostListView(ListView):
             paginator.get_page(page).has_other_pages(),
         )
 
-""" def post_list(request):
+def post_list(request):
     posts = Post.published.all()
     paginator = Paginator(posts, 3)
     page_number = request.GET.get('page', 1)
     posts = paginator.get_page(page_number)
-    return render(request, 'blog/post/list.html', {'posts': posts}) """
+    return render(request, 'blog/post/list.html', {'posts': posts})
 
 def post_detail(request, post):
     post = get_object_or_404(Post, slug=post, status=Post.Status.PUBLISHED)
@@ -38,12 +38,9 @@ def post_share(request, post_id):
         status=Post.Status.PUBLISHED
     )
     if request.method == 'POST':
-        # Form was submitted
         form = EmailPostForm(request.POST)
         if form.is_valid():
-        # Form fields passed validation
             cd = form.cleaned_data
-            # ... send email
     else:
         form = EmailPostForm()
         return render(request, 'blog/post/share.html', { 'post': post, 'form': form })
