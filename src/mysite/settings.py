@@ -125,12 +125,15 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # Email server configuration
-""" EMAIL_HOST = config('EMAIL_HOST')
+# Para desarrollo comprobamos la salida de los correos por consola
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# En producción damos paso al servidor smtp
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = config('EMAIL_HOST')
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = config('EMAIL_PORT')
-EMAIL_USE_TLS = config('EMAIL_USE_TLS')
-DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL') """
+EMAIL_USE_SSL = config('EMAIL_USE_SSL')
+DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
 
-# En desarrollo, enviamos los correos a la consola
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
