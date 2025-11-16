@@ -31,7 +31,18 @@ def post_list(request):
 
 def post_detail(request, post):
     post = get_object_or_404(Post, slug=post, status=Post.Status.PUBLISHED)
-    return render(request, 'blog/post/detail.html', {'post': post})
+    comments = post.comments.filter(active=True)
+    form = CommentForm()
+    return render(
+        request, 
+        'blog/post/detail.html', 
+        {
+            'post': post,
+            'comments': comments,
+            'form': form
+        }
+    )
+
 
 def post_share(request, post_id):
     post = get_object_or_404(
@@ -89,29 +100,29 @@ def post_comment(request, post_id):
         }
     )
 
-@require_POST
-def post_comment(request, post_id):
-    post = get_object_or_404(
-        Post, 
-        id=post_id, 
-        status=Post.Status.PUBLISHED
-    )
-    comment = None
-    form = CommentForm(request.POST)
+# @require_POST
+# def post_comment(request, post_id):
+#     post = get_object_or_404(
+#         Post, 
+#         id=post_id, 
+#         status=Post.Status.PUBLISHED
+#     )
+#     comment = None
+#     form = CommentForm(request.POST)
 
-    if form.is_valid():
-        comment = Comment(
-            post=post,
-            name=form.cleaned_data['name'],
-            email=form.cleaned_data['email'],
-            body=form.cleaned_data['body']
-        )
-        comment.save()
-    return render(
-        request, 
-        'blog/post/comment.html', {
-        'post': post,
-        'form': form,
-        'comment': comment
-        }
-    )
+#     if form.is_valid():
+#         comment = Comment(
+#             post=post,
+#             name=form.cleaned_data['name'],
+#             email=form.cleaned_data['email'],
+#             body=form.cleaned_data['body']
+#         )
+#         comment.save()
+#     return render(
+#         request, 
+#         'blog/post/comment.html', {
+#         'post': post,
+#         'form': form,
+#         'comment': comment
+#         }
+#    )
