@@ -1,6 +1,6 @@
 # 🧱 Clase 2 – Continuando con el blog
 
-En esta segund clase hemos creado un model manager, vistas para list y detail, la estructura de templates y la base.html y list.html templates.
+En esta segunda clase hemos creado un model manager, vistas para list y detail, la estructura de templates y la base.html y list.html templates.
 
 Además le hemos añadido unos estilos a nuestro blog.
 
