@@ -3,6 +3,9 @@ from django.shortcuts import get_object_or_404, render
 from django.views.generic import ListView
 from django.views.decorators.http import require_POST 
 from django.core.mail import send_mail
+
+from taggit.models import Tag
+
 from .models import Post
 from .forms import EmailPostForm, CommentForm
 
@@ -22,12 +25,24 @@ class PostListView(ListView):
             paginator.get_page(page).has_other_pages(),
         )
 
-def post_list(request):
+def post_list(request, tag_slug=None):
     posts = Post.published.all()
+    tag = None
+    if tag_slug:
+        tag = get_object_or_404(Tag, slug=tag_slug)
+        posts = posts.filter(tags__in=[tag])
     paginator = Paginator(posts, 3)
     page_number = request.GET.get('page', 1)
     posts = paginator.get_page(page_number)
-    return render(request, 'blog/post/list.html', {'posts': posts})
+    return render(
+        request, 
+        'blog/post/list.html', 
+        {
+            'posts': posts,
+            'tag':tag
+         
+        }
+    )
 
 def post_detail(request, post):
     post = get_object_or_404(Post, slug=post, status=Post.Status.PUBLISHED)
