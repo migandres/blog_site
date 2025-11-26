@@ -4,6 +4,9 @@ services:
     build:
       context: .
       dockerfile: .devcontainer/Dockerfile
+    user: "1000:1000"
+    environment:
+      - HOME=/tmp  
     volumes:
       - .:/workspace:delegated
       - django_vscode_data:/root/.vscode-server

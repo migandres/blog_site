@@ -3,6 +3,7 @@
   "dockerComposeFile": ["../docker-compose.dev.yml"],
   "service": "web",
   "workspaceFolder": "/workspace",
+  "updateRemoteUserUID": true,
   "forwardPorts": [8000],
   "portsAttributes": {
     "8000": {
@@ -12,12 +13,12 @@
   },
   
   // 1. Comando que se ejecuta una vez, para copiar el .env
-  "postCreateCommand": "cp .env.example .env && rm -f src/.gitkeep && grep -qxF 'cd /workspace/src' /root/.bashrc || echo 'cd /workspace/src' >> /root/.bashrc",
+  "postCreateCommand": "cp .env.example .env && rm -f src/.gitkeep && grep -qxF 'cd /workspace/src' $HOME/.bashrc || echo 'cd /workspace/src' >> $HOME/.bashrc",
  
   "customizations": {
     "vscode": {
       "settings": {
-        // Desactivar la detección y reenvío automáticos
+        "terminal.integrated.cwd": "${containerWorkspaceFolder}/src",
         "remote.autoForwardPorts": false,
         "remote.autoForwardPortsSource": "process",         
         "remote.portsAttributes": {
