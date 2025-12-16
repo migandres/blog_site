@@ -1,0 +1,394 @@
+[
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$AiTuJnJq5nyTtjZbQ1ca9Q$sDs0241Ptj+AqKvHcKlOirE6uX8nxkqRwpfv+752/Go=",
+    "last_login": "2025-11-29T09:26:19.405Z",
+    "is_superuser": true,
+    "username": "root",
+    "first_name": "",
+    "last_name": "",
+    "email": "root@root.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-10-20T09:11:16.157Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 3,
+  "fields": {
+    "name": "lenguajes",
+    "slug": "lenguajes"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 4,
+  "fields": {
+    "name": "frameworks",
+    "slug": "frameworks"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 5,
+  "fields": {
+    "name": "editores",
+    "slug": "editores"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 6,
+  "fields": {
+    "name": "patrones",
+    "slug": "patrones"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 7,
+  "fields": {
+    "name": "javascript",
+    "slug": "javascript"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 8,
+  "fields": {
+    "name": "python",
+    "slug": "python"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 9,
+  "fields": {
+    "name": "django",
+    "slug": "django"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 10,
+  "fields": {
+    "name": "flask",
+    "slug": "flask"
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 1,
+  "fields": {
+    "tag": 6,
+    "content_type": 7,
+    "object_id": 2
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 2,
+  "fields": {
+    "tag": 3,
+    "content_type": 7,
+    "object_id": 3
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 3,
+  "fields": {
+    "tag": 8,
+    "content_type": 7,
+    "object_id": 3
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 4,
+  "fields": {
+    "tag": 6,
+    "content_type": 7,
+    "object_id": 4
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 5,
+  "fields": {
+    "tag": 6,
+    "content_type": 7,
+    "object_id": 5
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 6,
+  "fields": {
+    "tag": 3,
+    "content_type": 7,
+    "object_id": 7
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 7,
+  "fields": {
+    "tag": 8,
+    "content_type": 7,
+    "object_id": 7
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 8,
+  "fields": {
+    "tag": 3,
+    "content_type": 7,
+    "object_id": 9
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 9,
+  "fields": {
+    "tag": 8,
+    "content_type": 7,
+    "object_id": 9
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 10,
+  "fields": {
+    "tag": 3,
+    "content_type": 7,
+    "object_id": 1
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 11,
+  "fields": {
+    "tag": 8,
+    "content_type": 7,
+    "object_id": 1
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 12,
+  "fields": {
+    "tag": 3,
+    "content_type": 7,
+    "object_id": 6
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 13,
+  "fields": {
+    "tag": 6,
+    "content_type": 7,
+    "object_id": 6
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 14,
+  "fields": {
+    "tag": 8,
+    "content_type": 7,
+    "object_id": 6
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 15,
+  "fields": {
+    "tag": 3,
+    "content_type": 7,
+    "object_id": 8
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 16,
+  "fields": {
+    "tag": 3,
+    "content_type": 7,
+    "object_id": 10
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 1,
+  "fields": {
+    "title": "Fundamentos de la programación en Python",
+    "slug": "fundamentos-de-la-programacion-en-python",
+    "body": "Python es un lenguaje de programación de alto nivel, interpretado y con una sintaxis muy legible. \r\nAprender sus fundamentos implica dominar variables, tipos de datos, estructuras de control y funciones. \r\nEstos pilares son esenciales para poder avanzar hacia temas más complejos como la orientación a objetos o el desarrollo web con Django.",
+    "publish": "2025-07-02T10:47:22Z",
+    "created": "2025-10-20T09:51:46.134Z",
+    "updated": "2025-11-21T18:33:15.306Z",
+    "status": "PB",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 2,
+  "fields": {
+    "title": "Qué es un algoritmo y cómo se construye",
+    "slug": "que-es-un-algoritmo",
+    "body": "Un algoritmo es un conjunto de pasos lógicos y finitos que permiten resolver un problema. \r\nEn programación, los algoritmos se traducen en instrucciones precisas para el ordenador. \r\nLa clave está en pensar el problema de forma ordenada antes de escribir código, buscando eficiencia y claridad.",
+    "publish": "2025-08-05T09:00:10Z",
+    "created": "2025-10-20T09:52:43.371Z",
+    "updated": "2025-11-21T18:32:59.822Z",
+    "status": "PB",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 3,
+  "fields": {
+    "title": "Estructuras de datos en Python: listas, tuplas y diccionarios",
+    "slug": "estructuras-de-datos-en-python",
+    "body": "Las estructuras de datos permiten organizar y manipular información en memoria. \r\nEn Python, las más comunes son: listas (ordenadas y mutables), tuplas (ordenadas e inmutables) y diccionarios (pares clave-valor). \r\nElegir la estructura adecuada mejora el rendimiento y la legibilidad del código.",
+    "publish": "2025-09-02T22:53:03Z",
+    "created": "2025-10-20T09:53:41.581Z",
+    "updated": "2025-11-21T18:33:11.411Z",
+    "status": "PB",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 4,
+  "fields": {
+    "title": "Comprendiendo los principios SOLID",
+    "slug": "comprendiendo-los-principios-solid",
+    "body": "Los principios SOLID son un conjunto de buenas prácticas de diseño orientado a objetos:\r\nS - Responsabilidad Única, \r\nO - Abierto/Cerrado, \r\nL - Sustitución de Liskov, \r\nI - Segregación de Interfaces, \r\nD - Inversión de Dependencias.\r\nAplicarlos ayuda a crear sistemas más mantenibles, flexibles y fáciles de probar.",
+    "publish": "2025-10-03T15:43:54Z",
+    "created": "2025-10-20T09:54:47.374Z",
+    "updated": "2025-11-21T18:32:50.034Z",
+    "status": "PB",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 5,
+  "fields": {
+    "title": "Introducción a los patrones de diseño",
+    "slug": "introduccion-a-los-patrones-de-diseno",
+    "body": "Los patrones de diseño son soluciones probadas a problemas comunes en el desarrollo de software. \r\nEjemplos clásicos son Singleton, Factory, Observer y Strategy. \r\nComprenderlos permite escribir código más reutilizable, escalable y fácil de mantener.",
+    "publish": "2025-10-07T09:55:00Z",
+    "created": "2025-10-20T09:55:26.388Z",
+    "updated": "2025-11-21T18:33:20.024Z",
+    "status": "PB",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 6,
+  "fields": {
+    "title": "Programación orientada a objetos en Python",
+    "slug": "programacion-orientada-a-objetos-en-python",
+    "body": "La programación orientada a objetos (POO) organiza el código en torno a clases y objetos. \r\nPython permite definir clases con atributos y métodos, y aplicar conceptos como herencia, encapsulación y polimorfismo. \r\nEste paradigma es fundamental en frameworks como Django o Flask.",
+    "publish": "2025-10-14T09:12:27Z",
+    "created": "2025-10-20T09:56:04.855Z",
+    "updated": "2025-11-21T18:31:45.854Z",
+    "status": "PB",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 7,
+  "fields": {
+    "title": "Buenas prácticas de programación en Python",
+    "slug": "buenas-practicas-de-programacion-en-python",
+    "body": "Seguir buenas prácticas como usar nombres descriptivos, comentar adecuadamente, seguir el estilo PEP 8 \r\ny escribir funciones cortas mejora la calidad del código. \r\nAdemás, usar herramientas como linters o tests automatizados ayuda a detectar errores antes de tiempo.",
+    "publish": "2025-10-16T12:00:00Z",
+    "created": "2025-10-20T09:56:51.941Z",
+    "updated": "2025-11-21T18:32:55.096Z",
+    "status": "PB",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 8,
+  "fields": {
+    "title": "Qué es la recursión y cuándo usarla",
+    "slug": "que-es-la-recursion-y-cuando-usarla",
+    "body": "La recursión ocurre cuando una función se llama a sí misma para resolver un problema más pequeño. \r\nEs útil en tareas como recorrer árboles o resolver problemas matemáticos (como el factorial). \r\nSin embargo, debe usarse con cuidado para evitar bucles infinitos o consumo excesivo de memoria.",
+    "publish": "2025-10-19T00:00:00Z",
+    "created": "2025-10-20T09:57:30.447Z",
+    "updated": "2025-11-21T18:31:38.434Z",
+    "status": "PB",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 9,
+  "fields": {
+    "title": "Estructuras de control en Python: if, for y while",
+    "slug": "estructuras-de-control-en-python",
+    "body": "Las estructuras de control determinan el flujo del programa. \r\n'if' permite tomar decisiones, 'for' recorrer secuencias y 'while' repetir mientras se cumpla una condición. \r\nDominar estos bloques es esencial para escribir algoritmos claros y eficientes.",
+    "publish": "2025-10-19T18:00:00Z",
+    "created": "2025-10-20T09:58:19.794Z",
+    "updated": "2025-11-21T18:33:05.975Z",
+    "status": "PB",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 10,
+  "fields": {
+    "title": "Qué son las funciones lambda y cómo usarlas",
+    "slug": "funciones-lambda-e-python",
+    "body": "Las funciones lambda son expresiones anónimas de una sola línea que permiten definir funciones pequeñas de forma rápida. \r\nSe usan frecuentemente junto con funciones como map(), filter() o sorted(), y son ideales para operaciones simples.",
+    "publish": "2025-10-20T09:59:04Z",
+    "created": "2025-10-20T09:59:10.382Z",
+    "updated": "2025-11-21T18:32:02.540Z",
+    "status": "PB",
+    "author": 1
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 1,
+  "fields": {
+    "post": 10,
+    "name": "Miguel",
+    "email": "migandgon@gmail.com",
+    "body": "comentarios",
+    "created": "2025-11-17T14:46:47.244Z",
+    "updated": "2025-11-17T14:46:47.244Z",
+    "active": true
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 2,
+  "fields": {
+    "post": 7,
+    "name": "Miguel",
+    "email": "emedemiguel2020@gmail.com",
+    "body": "lalallalalal",
+    "created": "2025-11-26T15:13:03.030Z",
+    "updated": "2025-11-26T15:13:03.030Z",
+    "active": true
+  }
+}
+]

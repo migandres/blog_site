@@ -1,0 +1,8 @@
+$ pip install psycopg2-binary
+Defaulting to user installation because normal site-packages is not writeable
+Collecting psycopg2-binary
+  Downloading psycopg2_binary-2.9.11-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (4.9 kB)
+Downloading psycopg2_binary-2.9.11-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.2/4.2 MB 17.6 MB/s  0:00:00
+Installing collected packages: psycopg2-binary
+Successfully installed psycopg2-binary-2.9.11
