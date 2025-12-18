@@ -2,6 +2,8 @@ from django.contrib.syndication.views import Feed
 from django.template.defaultfilters import truncatewords_html
 from django.urls import reverse_lazy
 
+import markdown
+
 from .models import Post
 
 class LatestPostsFeed(Feed):
@@ -17,7 +19,7 @@ class LatestPostsFeed(Feed):
         return item.title
     
     def item_description(self, item):
-        return truncatewords_html(item.body, 30)
+        return truncatewords_html(markdown.markdown(item.body), 30)
     
     def item_pubdate(self, item):
         return item.publish

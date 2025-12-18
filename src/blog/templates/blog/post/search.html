@@ -15,7 +15,7 @@
                 {{ post.title }}
                 </a>
             </h4>
-            {{ post.body|truncatewords:12}}
+            {{ post.body|markdown|truncatewords_html:12}}
             {% empty %}
                 <p>No hay resultados para esa búsqueda.</p>
         {% endfor %}
